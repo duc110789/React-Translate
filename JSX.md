@@ -1,4 +1,4 @@
-#Hướng dẫn JSX
+## Hướng dẫn JSX
 
 Xem khai báo biến dưới đây
 
