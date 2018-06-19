@@ -20,4 +20,19 @@ JSX thực tế là rendering logic vốn đã ghép đôi với UI logic khác:
 Thay vì tách nhân tạo technologies bởi đánh dấu và logic trong file riêng biệt. React tách riêng sự liên quan với các units ghép lỏng lẻo gọi là "components" chứa cả hai.
 Chúng ta sẽ quay lại components ở chương tiếp, nhưng nếu bạn không cảm thấy thoải mái đặt markup trong JS. Cuội nói chuyện này sẽ thuyết phục bạn(thằng Pete Hunt nói)
 
+React không bắt buộc dùng JSX, nhưng hầu hết mọi người tìm sự giúp đỡ như hỗ trợ trực quan khi làm việc với UI bên trong code JS. Nó hầu như cho phép React hiển thị error và warning message hữu ích hơn
+
+### Embedding Expressions in JSX
+
+Trong ví dụ dưới đây, chúng ta khai báo 1 biến gọi là `name` và sau đó dùng nó trong JSX bằng cách bao nó bằng ngoạc nhọn
+
+``` sh
+const name = 'Josh Perez';
+const element = <h1>Hello, {name}</h1>;
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+```
 
