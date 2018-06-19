@@ -61,3 +61,4 @@ Trong ví dụ dưới đây, chúng ta nhúng kết quả của việc gọi 1 
         document.getElementById('root')
     );
 ```
+Chúng ta chia JSX làm nhiều dòng để đọc cho dễ. Trong khi nó không bắt buộc, khi làm cái này chúng tôi khuyên bạn nên bao nó trong ngoạc đơn để tránh bẫy của automatic semicolon insertion.
