@@ -35,4 +35,29 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+Bạn có thể đặt bất kì biểu thức JS hợp lệ nào bên trong dấu ngoặc nhọn JSX. Ví dụ, `2 + 2`, `user.lastName`, hoặc `formatName(user)`
+tất cả các biểu thức hợp lệ
 
+Trong ví dụ dưới đây, chúng ta nhúng kết quả của việc gọi 1 hàm JS `formatName(user)`, trong 1 thẻ h1
+
+``` sh
+    function formatName(user) {
+        return user.firstName + ' ' + user.lastName;
+    }
+
+    const user = {
+        firstName: 'Harper',
+        lastName: 'Perez'
+    };
+
+    const element = (
+        <h1>
+            Hello, {formatName(user)}!
+        </h1>
+    );
+
+    ReactDOM.render(
+        element,
+        document.getElementById('root')
+    );
+```
