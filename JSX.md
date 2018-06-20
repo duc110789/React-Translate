@@ -75,7 +75,7 @@ Bạn có thể dùng ngoặc nhọn nhúng 1 biểu thức JS vào trong thuộ
 
 Đừng đặt quotes bao quanh ngoặc nhọn. Bạn có thể dùng cả 2 quotes(cho các giá trị chuỗi) or ngoặc nhọn cho các biểu thức, nhưng không dùng cả 2 thằng trong cùng 1 thuộc tính.
 
->### **Warning**: Vì JSX giống JS hơn HTML, React DOM uses quy ước đặt tên thuộc tính theo `camelCase` thay vì đặt tên thuộc tính HTML. For example, `class` tở thành `className` trong JSX, và `tabindex` thành `tabIndex`
+> **Warning**: Vì JSX giống JS hơn HTML, React DOM uses quy ước đặt tên thuộc tính theo `camelCase` thay vì đặt tên thuộc tính HTML. For example, `class` tở thành `className` trong JSX, và `tabindex` thành `tabIndex`
 
 ## Specifying Children with JSX
 
@@ -145,7 +145,7 @@ Những objects này đã gọi "React elements". Bạn có thể nghĩ rằng c
 
 Chúng ta sẽ tìm hiểu rendering React element to the DOM trong phần tiếp theo
 
->### **Tip:** Chúng tôi khuyên bạn dùng `[Babel language definition](http://babeljs.io/docs/en/editors/)` cho editor của bạn vì ES6 và JSX
-được đánh dấu đúng cách. Đây là website dùng `[ Oceanic Next ](https://labs.voronianski.com/oceanic-next-color-scheme/)` bảng phối màu tương thích với nó
+> **Tip:** Chúng tôi khuyên bạn dùng `[Babel language definition](http://babeljs.io/docs/en/editors/)` cho editor của bạn vì ES6 và JSX
+được đánh dấu đúng cách. Đây là website dùng `[Oceanic Next](https://labs.voronianski.com/oceanic-next-color-scheme/)` bảng phối màu tương thích với nó
 
 
