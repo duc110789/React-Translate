@@ -75,11 +75,10 @@ Bạn có thể dùng ngoặc nhọn nhúng 1 biểu thức JS vào trong thuộ
 
 Đừng đặt quotes bao quanh ngoặc nhọn. Bạn có thể dùng cả 2 quotes(cho các giá trị chuỗi) or ngoặc nhọn cho các biểu thức, nhưng không dùng cả 2 thằng trong cùng 1 thuộc tính.
 
-> Warning
+> ### Warning
 
 Vì JSX giống JS hơn HTML, React DOM uses quy ước đặt tên thuộc tính theo `camelCase` thay vì đặt tên thuộc tính HTML
 
 For example, `class` tở thành `className` trong JSX, và `tabindex` thành `tabIndex`
 
--------
 
