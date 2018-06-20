@@ -75,10 +75,77 @@ Bạn có thể dùng ngoặc nhọn nhúng 1 biểu thức JS vào trong thuộ
 
 Đừng đặt quotes bao quanh ngoặc nhọn. Bạn có thể dùng cả 2 quotes(cho các giá trị chuỗi) or ngoặc nhọn cho các biểu thức, nhưng không dùng cả 2 thằng trong cùng 1 thuộc tính.
 
-># ### Warning
+>### **Warning**: Vì JSX giống JS hơn HTML, React DOM uses quy ước đặt tên thuộc tính theo `camelCase` thay vì đặt tên thuộc tính HTML. For example, `class` tở thành `className` trong JSX, và `tabindex` thành `tabIndex`
 
-Vì JSX giống JS hơn HTML, React DOM uses quy ước đặt tên thuộc tính theo `camelCase` thay vì đặt tên thuộc tính HTML
+## Specifying Children with JSX
 
-For example, `class` tở thành `className` trong JSX, và `tabindex` thành `tabIndex`
+Nếu thẻ là rỗng, bạn có thể đóng ngay nó với />, giống XML
+
+`const element = <img src={user.avatarUrl}  />;`
+
+JSX có thể chứa Children
+
+`const element = (
+    <div>
+        <h1>Hello</h1>
+        <h2>Good morning sir</h2>
+    </div>
+);`
+
+## JSX Prevents Injection Attacks
+
+Nó là an toàn cho việc nhúng khi người dùng nhập vào trong JSX
+
+```sh
+    const title = response.potentiallyMaliciousInput;
+    // This is safe:
+    const element = <h1>{title} </h1>;
+```
+
+Bởi mặc định, React DOM [thoát](https://stackoverflow.com/questions/7381974/which-characters-need-to-be-escaped-on-html) mọi giá trị đã được nhúng vào trong JSX trước khi rendering chúng ra. Vì vậy 
+nó đảm bảo bạn không bao giờ bị tiêm thứ gì đó không viết rõ ràng vào ứng dụng của bạn
+
+Mọi thứ được chuyển sang chuỗi trước khi bắt đầu rendered. Cái này giúp ngăn ngừa [XSS tấn công](https://en.wikipedia.org/wiki/Cross-site_scripting)
+
+## JSX Represents Objects(Tương ứng là Objects)
+
+Babel biên dịch JSX dưới lời gọi hàm `React.createElement`
+
+Có 2 ví dụ giống nhau:
+
+```sh
+    const element = (
+        <h1 className="greeting">
+            Hello, world!
+        </h1>
+    );
+```
+```sh
+    const element = React.createElement (
+        'h1',
+        {className: 'greeting'},
+        'Hello World!'
+    );
+```
+
+`React.createElement` thực hiện 1 vài kiểm tra giúp bạn viết bug-free code nhưng về cơ bản nó tạo 1 object giống:
+
+```sh
+    // Note: This structure is simplifed
+    const element = {
+        type: 'h1',
+        props: {
+            className: 'greeting',
+            children: 'Hello World!'
+        }
+    };
+```
+
+Những objects này đã gọi "React elements". Bạn có thể nghĩ rằng chúng như mô tả cái bạn muốn hiển thị trên màn hình. React đọc được những objects này và dùng chúng để xây dựng DOM và giữ nó cho đến nay. 
+
+Chúng ta sẽ tìm hiểu rendering React element to the DOM trong phần tiếp theo
+
+>### **Tip:** Chúng tôi khuyên bạn dùng `[Babel language definition](http://babeljs.io/docs/en/editors/)` cho editor của bạn vì ES6 và JSX
+được đánh dấu đúng cách. Đây là website dùng `[ Oceanic Next ](https://labs.voronianski.com/oceanic-next-color-scheme/)` bảng phối màu tương thích với nó
 
 
