@@ -61,5 +61,25 @@ Trong ví dụ dưới đây, chúng ta nhúng kết quả của việc gọi 1 
         document.getElementById('root')
     );
 ```
-Chúng ta chia JSX làm nhiều dòng để đọc cho dễ. Trong khi nó không bắt buộc, khi làm cái này chúng tôi khuyên bạn nên bao nó trong ngoạc đơn để tránh bẫy của [automatic semicolon insertion.](https://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi)
+Chúng ta chia JSX làm nhiều dòng để đọc cho dễ. Trong khi nó không bắt buộc, khi làm cái này chúng tôi khuyên bạn nên bao nó trong ngoạc đơn để tránh bẫy của [automatic semicolon insertion.](https://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi).
+
+## Specifying Attributes with JSX
+
+Bạn có thể dùng trích dẫn xác định chuỗi kí tự 
+
+`const element = <div tabindex="0"></div>;`
+
+Bạn có thể dùng ngoặc nhọn nhúng 1 biểu thức JS vào trong thuộc tính
+
+`const element = <div><img src={user.avatarUrl}></div>;`
+
+Đừng đặt quotes bao quanh ngoặc nhọn. Bạn có thể dùng cả 2 quotes(cho các giá trị chuỗi) or ngoặc nhọn cho các biểu thức, nhưng không dùng cả 2 thằng trong cùng 1 thuộc tính.
+
+> Warning
+
+Vì JSX giống JS hơn HTML, React DOM uses quy ước đặt tên thuộc tính theo `camelCase` thay vì đặt tên thuộc tính HTML
+
+For example, `class` tở thành `className` trong JSX, và `tabindex` thành `tabIndex`
+
+-------
 
