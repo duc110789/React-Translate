@@ -145,7 +145,7 @@ Những objects này đã gọi "React elements". Bạn có thể nghĩ rằng c
 
 Chúng ta sẽ tìm hiểu rendering React element to the DOM trong phần tiếp theo
 
-> **Tip:** Chúng tôi khuyên bạn dùng `[Babel language definition](http://babeljs.io/docs/en/editors/)` cho editor của bạn vì ES6 và JSX
-được đánh dấu đúng cách. Đây là website dùng `[Oceanic Next](https://labs.voronianski.com/oceanic-next-color-scheme/)` bảng phối màu tương thích với nó
+> **Tip:** Chúng tôi khuyên bạn dùng [Babel language definition](http://babeljs.io/docs/en/editors/) cho editor của bạn vì ES6 và JSX
+được đánh dấu đúng cách. Đây là website dùng [Oceanic Next](https://labs.voronianski.com/oceanic-next-color-scheme/) bảng phối màu tương thích với nó
 
 
